@@ -1,0 +1,46 @@
+../obj/i686-m64$(OBJ_OPTION)/qsort.o: qsort.c
+../obj/i686-m64$(OBJ_OPTION)/MemStats.o: MemStats.cc MemStats.h
+../obj/i686-m64$(OBJ_OPTION)/LHashTrie.o: LHashTrie.cc
+../obj/i686-m64$(OBJ_OPTION)/SArrayTrie.o: SArrayTrie.cc Trie.cc Trie.h MemStats.h SArray.h Map.h \
+ ../../include/Boolean.h SArray.cc
+../obj/i686-m64$(OBJ_OPTION)/Array.o: Array.cc Array.h MemStats.h
+../obj/i686-m64$(OBJ_OPTION)/IntervalHeap.o: IntervalHeap.cc IntervalHeap.h ../../include/Boolean.h \
+ Array.cc Array.h MemStats.h
+../obj/i686-m64$(OBJ_OPTION)/Map.o: Map.cc Map.h ../../include/Boolean.h MemStats.h
+../obj/i686-m64$(OBJ_OPTION)/SArray.o: SArray.cc SArray.h Map.h ../../include/Boolean.h MemStats.h
+../obj/i686-m64$(OBJ_OPTION)/LHash.o: LHash.cc LHash.h Map.h ../../include/Boolean.h MemStats.h
+../obj/i686-m64$(OBJ_OPTION)/Map2.o: Map2.cc Map2.h LHash.h Map.h ../../include/Boolean.h MemStats.h \
+ LHash.cc
+../obj/i686-m64$(OBJ_OPTION)/Trie.o: Trie.cc Trie.h MemStats.h LHash.h Map.h ../../include/Boolean.h \
+ LHash.cc
+../obj/i686-m64$(OBJ_OPTION)/CachedMem.o: CachedMem.cc CachedMem.h
+../obj/i686-m64$(OBJ_OPTION)/testArray.o: testArray.cc Array.cc Array.h MemStats.h
+../obj/i686-m64$(OBJ_OPTION)/testMap.o: testMap.cc SArray.h Map.h ../../include/Boolean.h MemStats.h \
+ LHash.h SArray.cc LHash.cc
+../obj/i686-m64$(OBJ_OPTION)/benchHash.o: benchHash.cc ../../include/option.h \
+ ../../include/cfuncproto.h LHash.cc LHash.h Map.h \
+ ../../include/Boolean.h MemStats.h Trie.cc Trie.h
+../obj/i686-m64$(OBJ_OPTION)/testHash.o: testHash.cc LHash.cc LHash.h Map.h ../../include/Boolean.h \
+ MemStats.h
+../obj/i686-m64$(OBJ_OPTION)/testSizes.o: testSizes.cc Trie.cc Trie.h MemStats.h LHash.h Map.h \
+ ../../include/Boolean.h LHash.cc ../../include/Counts.h \
+ ../../include/Boolean.h ../../include/XCount.h ../../include/File.h \
+ ../../include/XCount.h ../../include/Vocab.h ../../include/LHash.h \
+ ../../include/SArray.h ../../include/Map.h ../../include/Array.h \
+ ../../include/MemStats.h ../../include/NgramStats.h \
+ ../../include/LMStats.h ../../include/Vocab.h ../../include/TextStats.h \
+ ../../include/Prob.h ../../include/Counts.h ../../include/Debug.h \
+ ../../include/Trie.h
+../obj/i686-m64$(OBJ_OPTION)/testCachedMem.o: testCachedMem.cc CachedMem.cc CachedMem.h
+../bin/i686-m64$(BIN_OPTION)/testArray: ../obj/i686-m64$(OBJ_OPTION)/testArray.o
+testArray: ../bin/i686-m64$(BIN_OPTION)/testArray
+../bin/i686-m64$(BIN_OPTION)/testMap: ../obj/i686-m64$(OBJ_OPTION)/testMap.o
+testMap: ../bin/i686-m64$(BIN_OPTION)/testMap
+../bin/i686-m64$(BIN_OPTION)/benchHash: ../obj/i686-m64$(OBJ_OPTION)/benchHash.o
+benchHash: ../bin/i686-m64$(BIN_OPTION)/benchHash
+../bin/i686-m64$(BIN_OPTION)/testHash: ../obj/i686-m64$(OBJ_OPTION)/testHash.o
+testHash: ../bin/i686-m64$(BIN_OPTION)/testHash
+../bin/i686-m64$(BIN_OPTION)/testSizes: ../obj/i686-m64$(OBJ_OPTION)/testSizes.o
+testSizes: ../bin/i686-m64$(BIN_OPTION)/testSizes
+../bin/i686-m64$(BIN_OPTION)/testCachedMem: ../obj/i686-m64$(OBJ_OPTION)/testCachedMem.o
+testCachedMem: ../bin/i686-m64$(BIN_OPTION)/testCachedMem
